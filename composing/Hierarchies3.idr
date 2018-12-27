@@ -47,8 +47,8 @@ Draw m => TurtleGraphics m where
   fw t d = do
       [srf, pos, col, lines] <- split t
       (x, y, a) <- read pos
-      let x' = x + cast (cast d * (cos $ rad a))
-      let y' = y + cast (cast d * (sin $ rad a))
+      let x' = x + cast (cast d * (sin $ rad a))
+      let y' = y + cast (cast d * (cos $ rad a))
       write pos (x', y', a)
       xs <- read lines
       c <- read col
